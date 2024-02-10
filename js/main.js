@@ -23,8 +23,31 @@ window.onload = function () {
 };
 
 
+rangeSliders.forEach(item => {
+
+
+
+    //  item.addEventListener
+
+});
+
+
 
 rangeSliders.forEach(item => {
+
+    item.addEventListener('mouseover', () => {
+        item.style.cursor = 'pointer'
+    });
+
+    item.addEventListener('mousedown', () => {
+        item.style.cursor = 'grabbing'
+    });
+
+    item.addEventListener('mouseup', () => {
+        item.style.cursor = 'pointer'
+    });
+
+
     item.addEventListener('input', () => {
 
         let value = item.value
@@ -99,8 +122,6 @@ rangeSliders.forEach(item => {
 
 
     });
-
-
 
 
 });
